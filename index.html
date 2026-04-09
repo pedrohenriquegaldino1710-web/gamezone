@@ -103,7 +103,12 @@
         <div style="display:flex; justify-content:center;">
           <img src="https://gerarqrcodepix.com.br/api/v1?nome=Pedro Henrique Galdino de Oliveira&cidade=Guaratingueta&valor=9.90&saida=qr&chave=12988323861" alt="QR Code Pix" style="width:180px; height:180px; border-radius:12px;" />
         </div>
-        <p style="color:#888; font-size:13px; margin-top:16px;">Após o pagamento sua conta será ativada em até 1 hora</p>
+        <div style="background:#0f0f13; border:1px solid #2a2a35; border-radius:8px; padding:12px 16px; display:flex; justify-content:space-between; align-items:center; margin-top:16px;">
+          <span style="color:#ccc; font-size:14px;">12988323861</span>
+          <button onclick="copiarPix()" style="background:#534AB7; color:#fff; border:none; padding:6px 14px; border-radius:6px; font-size:13px; cursor:pointer; width:auto;">Copiar</button>
+        </div>
+        <p id="copiado" style="color:#1D9E75; font-size:13px; margin-top:8px; display:none;">✅ Chave copiada!</p>
+        <p style="color:#888; font-size:13px; margin-top:8px;">Após o pagamento sua conta será ativada em até 1 hora</p>
         <p class="voltar" onclick="mostrar('tela-planos')">← Voltar</p>
       </div>
     </section>
@@ -130,6 +135,12 @@
       telas.forEach(t => document.getElementById(t).style.display = 'none');
       document.getElementById(tela).style.display = 'block';
       window.scrollTo(0, 0);
+    }
+
+    function copiarPix() {
+      navigator.clipboard.writeText('12988323861');
+      document.getElementById('copiado').style.display = 'block';
+      setTimeout(() => document.getElementById('copiado').style.display = 'none', 3000);
     }
   </script>
 
