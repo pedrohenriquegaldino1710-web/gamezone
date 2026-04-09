@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GamerZone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TELA INICIAL -->
+  <div id="tela-inicio">
+    <header>
+      <h1>🎮 GamerZone</h1>
+      <p>A comunidade gamer brasileira</p>
+      <button onclick="mostrar('tela-planos')">Começar agora</button>
+    </header>
+
+    <section class="features">
+      <div class="feature">
+        <span>🏠</span>
+        <h3>Comunidades por jogo</h3>
+        <p>Encontre sua galera em servidores organizados por jogo</p>
+      </div>
+      <div class="feature">
+        <span>💬</span>
+        <h3>Chat em tempo real</h3>
+        <p>Converse com outros gamers instantaneamente</p>
+      </div>
+      <div class="feature">
+        <span>🏆</span>
+        <h3>Encontre parceiros</h3>
+        <p>Ache jogadores do mesmo nível para jogar junto</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- TELA DE PLANOS -->
+  <div id="tela-planos" style="display:none;">
+    <header>
+      <h1>🎮 GamerZone</h1>
+      <p>Escolha seu plano</p>
+    </header>
+
+    <section class="planos">
+      <div class="cards">
+        <div class="card">
+          <h3>Gratuito</h3>
+          <p class="preco">R$ 0</p>
+          <ul>
+            <li>✅ Entrar em comunidades</li>
+            <li>✅ Chat em grupo</li>
+            <li>❌ Sem anúncios</li>
+            <li>❌ Badge exclusivo</li>
+          </ul>
+          <button onclick="mostrar('tela-cadastro')">Começar grátis</button>
+        </div>
+
+        <div class="card">
+          <h3>Premium</h3>
+          <p class="preco">R$ 9,90/mês</p>
+          <ul>
+            <li>✅ Entrar em comunidades</li>
+            <li>✅ Chat em grupo</li>
+            <li>✅ Sem anúncios</li>
+            <li>✅ Badge exclusivo</li>
+          </ul>
+          <button onclick="mostrar('tela-pix')">Assinar via Pix</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- TELA DE CADASTRO -->
+  <div id="tela-cadastro" style="display:none;">
+    <header>
+      <h1>🎮 GamerZone</h1>
+      <p>Crie sua conta</p>
+    </header>
+
+    <section class="formulario">
+      <div class="form-card">
+        <input type="text" placeholder="Seu nick de jogador" />
+        <input type="email" placeholder="Seu email" />
+        <input type="password" placeholder="Senha" />
+        <button onclick="mostrar('tela-sucesso')">Criar conta grátis</button>
+        <p class="voltar" onclick="mostrar('tela-planos')">← Voltar</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- TELA PIX -->
+  <div id="tela-pix" style="display:none;">
+    <header>
+      <h1>🎮 GamerZone</h1>
+      <p>Assinar Premium</p>
+    </header>
+
+    <section class="formulario">
+      <div class="form-card">
+        <h3>Pague R$ 9,90 via Pix</h3>
+        <p style="color:#888; margin-bottom:20px;">Escaneie o QR Code abaixo</p>
+        <div style="display:flex; justify-content:center;">
+          <img src="https://gerarqrcodepix.com.br/api/v1?nome=Pedro Henrique Galdino de Oliveira&cidade=Guaratingueta&valor=9.90&saida=qr&chave=12988323861" alt="QR Code Pix" style="width:180px; height:180px; border-radius:12px;" />
+        </div>
+        <p style="color:#888; font-size:13px; margin-top:16px;">Após o pagamento sua conta será ativada em até 1 hora</p>
+        <p class="voltar" onclick="mostrar('tela-planos')">← Voltar</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- TELA DE SUCESSO -->
+  <div id="tela-sucesso" style="display:none;">
+    <header>
+      <h1>🎮 GamerZone</h1>
+    </header>
+    <section class="formulario">
+      <div class="form-card" style="text-align:center;">
+        <div style="font-size:60px; margin-bottom:16px;">🎉</div>
+        <h3>Conta criada com sucesso!</h3>
+        <p style="color:#888; margin: 16px 0;">Bem vindo ao GamerZone! O app estará disponível em breve.</p>
+        <button onclick="mostrar('tela-inicio')">Voltar ao início</button>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    function mostrar(tela) {
+      const telas = ['tela-inicio', 'tela-planos', 'tela-cadastro', 'tela-pix', 'tela-sucesso'];
+      telas.forEach(t => document.getElementById(t).style.display = 'none');
+      document.getElementById(tela).style.display = 'block';
+      window.scrollTo(0, 0);
+    }
+  </script>
+
+</body>
+</html>
