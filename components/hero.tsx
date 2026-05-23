@@ -55,7 +55,7 @@ export function Hero() {
             <Zap className="w-10 h-10 text-primary mx-auto mb-4" />
             <h3 className="text-lg font-semibold mb-2">Comunidade</h3>
             <p className="text-muted-foreground text-sm">
-              Conecte-se com milhares de gamers apaixonados
+              Conecte-se com outros gamers apaixonados
             </p>
           </div>
         </div>

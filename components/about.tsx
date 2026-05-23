@@ -17,33 +17,34 @@ export function About() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
           <div className="text-center">
             <Users className="w-10 h-10 text-primary mx-auto mb-2" />
-            <div className="text-2xl font-bold">10k+</div>
+            <div className="text-2xl font-bold">0</div>
             <div className="text-sm text-muted-foreground">Membros</div>
           </div>
           <div className="text-center">
             <Award className="w-10 h-10 text-primary mx-auto mb-2" />
-            <div className="text-2xl font-bold">500+</div>
+            <div className="text-2xl font-bold">0</div>
             <div className="text-sm text-muted-foreground">Torneios</div>
           </div>
           <div className="text-center">
             <Globe className="w-10 h-10 text-primary mx-auto mb-2" />
-            <div className="text-2xl font-bold">50+</div>
-            <div className="text-sm text-muted-foreground">Paises</div>
+            <div className="text-2xl font-bold">1</div>
+            <div className="text-sm text-muted-foreground">Pais</div>
           </div>
           <div className="text-center">
             <Heart className="w-10 h-10 text-primary mx-auto mb-2" />
-            <div className="text-2xl font-bold">99%</div>
-            <div className="text-sm text-muted-foreground">Satisfacao</div>
+            <div className="text-2xl font-bold">Novo!</div>
+            <div className="text-sm text-muted-foreground">Comecando</div>
           </div>
         </div>
 
         <div className="bg-card rounded-2xl p-8 border border-border">
           <h3 className="text-xl font-bold mb-4 text-center">Nossa Historia</h3>
           <p className="text-muted-foreground text-center text-pretty">
-            O GamerZone nasceu em 2024 com um sonho simples: criar um espaco onde gamers 
-            pudessem se conectar, aprender e crescer juntos. Hoje, somos uma das maiores 
-            comunidades gaming do Brasil, oferecendo conteudo exclusivo, torneios emocionantes 
-            e uma comunidade acolhedora para todos os niveis de jogadores.
+            O GamerZone nasceu em 2026 com um sonho simples: criar um espaco onde gamers 
+            pudessem se conectar, aprender e crescer juntos. Estamos apenas comecando nossa 
+            jornada para nos tornarmos uma das maiores comunidades gaming do Brasil, oferecendo 
+            conteudo exclusivo, torneios emocionantes e uma comunidade acolhedora para todos 
+            os niveis de jogadores. Junte-se a nos desde o inicio!
           </p>
         </div>
       </div>
